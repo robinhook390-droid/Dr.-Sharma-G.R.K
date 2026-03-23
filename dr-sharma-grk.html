@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Sharma G.R.K | Doctor | Koramangala, Bengaluru</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf8f5;--white:#ffffff;--ink:#0e0e0e;--mid:#555;--muted:#999;
+  --border:#ebebeb;--soft:#f3f0ec;
+  --blue:#1a3a6b;--blue2:#2952a3;--blue3:#e8edf7;
+  --amber:#c47c2b;--amber2:#e09040;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--blue)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:68px;background:rgba(250,248,245,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(10px)}
+.nl{display:flex;align-items:center;gap:0.9rem}
+.nl-circle{width:36px;height:36px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:#fff;font-weight:700;letter-spacing:0.5px}
+.nl-text strong{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--ink);display:block}
+.nl-text span{font-size:0.58rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+.nm{display:flex;gap:2rem;list-style:none}
+.nm a{font-size:0.75rem;color:var(--mid);text-decoration:none;letter-spacing:0.5px;transition:color 0.2s}
+.nm a:hover{color:var(--blue)}
+.nc{background:var(--blue);color:#fff;padding:0.48rem 1.3rem;border-radius:100px;text-decoration:none;font-size:0.74rem;font-weight:600;transition:all 0.3s}
+.nc:hover{background:var(--blue2);transform:translateY(-1px)}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:68px}
+
+/* LEFT — white clean */
+.hl{
+  background:var(--white);
+  padding:72px 7% 72px 6%;
+  display:flex;flex-direction:column;justify-content:center;
+  border-right:1px solid var(--border);
+  position:relative;
+}
+.hl-tag{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  background:var(--blue3);border:1px solid rgba(26,58,107,0.15);
+  color:var(--blue);padding:0.35rem 1rem;border-radius:100px;
+  font-size:0.62rem;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:2.5rem;width:fit-content;
+}
+.hl-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--amber2)}
+.hero-name{
+  font-family:'DM Serif Display',serif;
+  font-size:clamp(2.8rem,5vw,5rem);
+  color:var(--ink);line-height:0.95;
+  margin-bottom:1.2rem;
+}
+.hero-name em{color:var(--blue);font-style:italic;display:block}
+.hero-qual{
+  font-size:0.75rem;color:var(--muted);
+  letter-spacing:2.5px;text-transform:uppercase;
+  margin-bottom:0.6rem;
+  padding-left:0.9rem;border-left:2px solid var(--amber2);
+}
+.hero-loc{
+  font-size:0.82rem;color:var(--mid);
+  margin-bottom:2rem;
+  padding-left:0.9rem;border-left:2px solid var(--amber2);
+}
+.hero-desc{font-size:0.88rem;color:var(--muted);line-height:1.9;max-width:420px;margin-bottom:2.5rem}
+.hstats{display:flex;gap:0;margin-bottom:3rem}
+.hs{padding-right:2rem;margin-right:2rem;border-right:1px solid var(--border)}
+.hs:last-child{border-right:none}
+.hs-n{font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--blue);line-height:1}
+.hs-l{font-size:0.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-top:0.2rem}
+.hbtns{display:flex;gap:0.8rem;flex-wrap:wrap}
+.btn-blue{display:inline-flex;align-items:center;gap:0.5rem;background:var(--blue);color:#fff;padding:0.88rem 1.8rem;border-radius:100px;text-decoration:none;font-weight:600;font-size:0.82rem;transition:all 0.3s}
+.btn-blue:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(26,58,107,0.3)}
+.btn-wa{display:inline-flex;align-items:center;gap:0.5rem;background:#25D366;color:#fff;padding:0.88rem 1.8rem;border-radius:100px;text-decoration:none;font-size:0.82rem;font-weight:600;transition:all 0.3s}
+.btn-wa:hover{background:#1da851;transform:translateY(-2px)}
+
+/* RIGHT — blue texture */
+.hr{
+  background:var(--blue);
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:4rem 3rem;
+}
+.hr::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='40' cy='40' r='30' stroke='rgba(255,255,255,0.04)' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='20' stroke='rgba(255,255,255,0.04)' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
+}
+.hr::after{content:'';position:absolute;bottom:-150px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(196,124,43,0.2) 0%,transparent 70%);border-radius:50%}
+.hr-img-wrap{
+  width:280px;height:280px;border-radius:50%;overflow:hidden;
+  border:4px solid rgba(255,255,255,0.15);
+  box-shadow:0 24px 60px rgba(0,0,0,0.3);
+  z-index:1;position:relative;margin-bottom:2rem;
+}
+.hr-img-wrap img{width:100%;height:100%;object-fit:cover;filter:saturate(0.8) brightness(0.9)}
+.hr-name-card{
+  background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:16px;padding:1.5rem 2rem;text-align:center;
+  z-index:1;position:relative;width:100%;max-width:300px;
+}
+.hr-name-card h3{font-family:'DM Serif Display',serif;font-size:1.5rem;color:#fff;margin-bottom:0.3rem}
+.hr-name-card p{font-size:0.72rem;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:1rem}
+.hr-rating{display:flex;align-items:center;justify-content:center;gap:0.5rem}
+.hr-stars{color:var(--amber2);font-size:0.9rem;letter-spacing:1px}
+.hr-rval{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#fff}
+.hr-rlbl{font-size:0.65rem;color:rgba(255,255,255,0.4)}
+.hr-loc-badge{
+  position:absolute;bottom:2rem;left:2rem;right:2rem;
+  background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);
+  border-radius:10px;padding:0.9rem 1rem;
+  z-index:1;
+}
+.hr-loc-badge p{font-size:0.75rem;color:rgba(255,255,255,0.5);line-height:1.5}
+.hr-loc-badge span{color:rgba(255,255,255,0.8)}
+
+/* SECTION COMMONS */
+.sw{padding:90px 6%}
+.sl{font-size:0.58rem;letter-spacing:4px;text-transform:uppercase;color:var(--blue);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.7rem}
+.sl::before{content:'';display:block;width:24px;height:1px;background:var(--blue)}
+h2{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3.2vw,2.8rem);color:var(--ink);line-height:1.1;margin-bottom:0.8rem}
+.sdesc{font-size:0.88rem;color:var(--muted);line-height:1.85;max-width:520px}
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity 0.65s,transform 0.65s}
+.fade-up.vis{opacity:1;transform:translateY(0)}
+
+/* SPECIALTIES */
+.spec-bg{background:var(--white)}
+.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.scard{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all 0.3s;position:relative;overflow:hidden}
+.scard::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--blue);transform:scaleY(0);transform-origin:bottom;transition:transform 0.4s}
+.scard:hover{box-shadow:0 12px 36px rgba(0,0,0,0.07);transform:translateY(-4px);border-color:rgba(26,58,107,0.2)}
+.scard:hover::before{transform:scaleY(1)}
+.sc-n{font-family:'DM Serif Display',serif;font-size:3rem;color:rgba(0,0,0,0.04);line-height:1;margin-bottom:0.3rem}
+.sc-ico{font-size:1.8rem;margin-bottom:0.8rem}
+.scard h3{font-size:0.9rem;color:var(--ink);margin-bottom:0.4rem;font-weight:600}
+.scard p{font-size:0.78rem;color:var(--muted);line-height:1.7}
+
+/* GALLERY */
+.gallery-bg{background:var(--soft)}
+.slider-outer{position:relative;border-radius:16px;overflow:hidden;margin-top:3rem}
+.slider-track{display:flex;transition:transform 0.65s cubic-bezier(0.25,0.46,0.45,0.94)}
+.slide{min-width:100%;height:480px;position:relative;overflow:hidden}
+.slide img{width:100%;height:100%;object-fit:cover;filter:brightness(0.6) saturate(0.75);transform:scale(1.04);transition:transform 7s ease}
+.slide.act img{transform:scale(1)}
+.slov{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,14,14,0.95) 0%,rgba(14,14,14,0.2) 55%,transparent 100%)}
+.slcont{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 3rem;display:flex;justify-content:space-between;align-items:flex-end}
+.sltag{display:inline-block;background:var(--blue);color:#fff;font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;padding:0.25rem 0.8rem;border-radius:100px;margin-bottom:0.6rem}
+.sltxt h3{font-family:'DM Serif Display',serif;font-size:2.2rem;color:#fff;line-height:1.1;margin-bottom:0.3rem}
+.sltxt p{font-size:0.8rem;color:rgba(255,255,255,0.45);max-width:460px}
+.slnum{font-family:'DM Serif Display',serif;font-size:5rem;color:rgba(255,255,255,0.05);font-weight:700;line-height:1;white-space:nowrap}
+.sarr{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:all 0.3s}
+.sarr:hover{background:var(--blue);border-color:var(--blue)}
+.sarr-p{left:1rem}.sarr-n{right:1rem}
+.sdots{display:flex;gap:0.5rem;margin-top:1.3rem;justify-content:center}
+.sdot{width:6px;height:6px;border-radius:3px;background:rgba(26,58,107,0.2);cursor:pointer;transition:all 0.4s}
+.sdot.on{width:26px;background:var(--blue)}
+
+/* REVIEWS */
+.rev-bg{background:var(--white)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:3.5rem}
+.rcard{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:1.8rem;transition:all 0.3s;position:relative;overflow:hidden}
+.rcard::after{content:'"';position:absolute;top:-1rem;right:1.5rem;font-family:'DM Serif Display',serif;font-size:7rem;color:rgba(26,58,107,0.05);line-height:1}
+.rcard:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.07);border-color:rgba(26,58,107,0.2)}
+.rc-stars{color:var(--amber);font-size:0.82rem;letter-spacing:2px;margin-bottom:0.8rem}
+.rcard p{font-size:0.83rem;color:var(--mid);line-height:1.85;font-style:italic;margin-bottom:1.2rem}
+.rc-name strong{display:block;font-size:0.85rem;color:var(--ink);margin-bottom:2px;font-weight:600}
+.rc-name span{font-size:0.68rem;color:var(--muted)}
+
+/* CONTACT */
+.contact-bg{background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3.5rem;align-items:start}
+.cboxes{display:flex;flex-direction:column;gap:1rem}
+.cbox{display:flex;gap:1rem;align-items:flex-start;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.3rem;transition:all 0.3s}
+.cbox:hover{border-color:var(--blue);box-shadow:0 4px 16px rgba(26,58,107,0.07)}
+.cbox-ic{width:42px;height:42px;border-radius:10px;flex-shrink:0;background:var(--blue3);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.cbox h5{font-size:0.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.3rem}
+.cbox p,.cbox a{font-size:0.9rem;color:var(--ink);text-decoration:none;transition:color 0.2s}
+.cbox a:hover{color:var(--blue)}
+
+/* APPOINTMENT */
+.appt-bg{background:var(--blue);position:relative;overflow:hidden}
+.appt-bg::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(255,255,255,0.05) 0%,transparent 70%);border-radius:50%}
+.appt-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
+.appt-bg .sl{color:var(--amber2)}
+.appt-bg .sl::before{background:var(--amber2)}
+.appt-bg h2{color:#fff}
+.appt-bg .sdesc{color:rgba(255,255,255,0.55)}
+.perks{display:flex;flex-direction:column;gap:0.8rem;margin-top:1.8rem}
+.perk{display:flex;align-items:center;gap:0.7rem;font-size:0.82rem;color:rgba(255,255,255,0.55)}
+.perk::before{content:'✓';color:var(--amber2);font-weight:700}
+.aform{background:#fff;border-radius:20px;padding:2.5rem;box-shadow:0 24px 60px rgba(0,0,0,0.2)}
+.aform h3{font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--ink);margin-bottom:0.3rem}
+.aform .fmeta{font-size:0.76rem;color:var(--muted);margin-bottom:1.8rem}
+.frow2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{margin-bottom:0.9rem}
+.fg label{display:block;font-size:0.58rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:0.35rem}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:0.75rem 1rem;color:var(--ink);font-family:'Syne',sans-serif;font-size:0.83rem;outline:none;transition:border-color 0.3s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);background:#fff}
+.fg textarea{resize:vertical;min-height:75px}
+.fsub{width:100%;background:var(--blue);color:#fff;border:none;padding:0.9rem;border-radius:100px;font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:600;cursor:pointer;transition:all 0.3s;margin-top:0.3rem}
+.fsub:hover{background:var(--ink);transform:translateY(-1px)}
+
+/* FOOTER */
+footer{background:var(--ink);padding:2rem 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fbrand strong{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--amber2)}
+.fbrand p{font-size:0.66rem;color:rgba(255,255,255,0.3);margin-top:2px}
+footer small{font-size:0.66rem;color:rgba(255,255,255,0.2)}
+.fab{position:fixed;bottom:1.5rem;right:1.5rem;z-index:300;background:var(--blue);color:#fff;padding:0.82rem 1.5rem;border-radius:100px;text-decoration:none;font-weight:600;font-size:0.8rem;display:flex;align-items:center;gap:0.5rem;box-shadow:0 8px 28px rgba(26,58,107,0.5);transition:all 0.3s}
+.fab:hover{background:var(--blue2);transform:translateY(-3px)}
+
+@media(max-width:900px){
+  .nm{display:none}
+  .hero{grid-template-columns:1fr}.hr{display:none}
+  .hl{padding:70px 5% 60px}
+  .spec-grid,.rev-grid,.contact-grid,.appt-grid{grid-template-columns:1fr}
+  .frow2{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center}
+}
+@media(max-width:600px){
+  .spec-grid,.rev-grid{grid-template-columns:1fr}
+  .slide{height:360px}.slcont{padding:1.5rem}.sltxt h3{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nl">
+    <div class="nl-circle">GRK</div>
+    <div class="nl-text">
+      <strong>Dr. Sharma G.R.K</strong>
+      <span>Doctor &middot; Koramangala, Bengaluru</span>
+    </div>
+  </div>
+  <ul class="nm">
+    <li><a href="#specialties">Specialties</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#appointment">Appointment</a></li>
+  </ul>
+  <a href="#appointment" class="nc">Book Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hl">
+    <div class="hl-tag"><div class="hl-tag-dot"></div>Koramangala, Bengaluru</div>
+    <h1 class="hero-name">Dr. Sharma<em>G.R.K</em></h1>
+    <div class="hero-qual">MBBS &middot; General Physician</div>
+    <div class="hero-loc">&#128205; St. Johns, Koramangala 2nd Block, Bengaluru &ndash; 560034</div>
+    <p class="hero-desc">Trusted doctor serving patients in Koramangala, Bengaluru. Available on WhatsApp for quick consultations and appointments. Comprehensive general medical care for the whole family.</p>
+    <div class="hstats">
+      <div class="hs"><div class="hs-n">4.2<span style="font-size:1.5rem">&#9733;</span></div><div class="hs-l">Rating</div></div>
+      <div class="hs"><div class="hs-n">19</div><div class="hs-l">Reviews</div></div>
+    </div>
+    <div class="hbtns">
+      <a href="tel:08025523095" class="btn-blue">&#128222; Call: 080 2552 3095</a>
+      <a href="https://wa.me/918025523095" target="_blank" class="btn-wa">&#128172; WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="hr">
+    <div class="hr-img-wrap">
+      <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="Doctor">
+    </div>
+    <div class="hr-name-card">
+      <h3>Dr. Sharma G.R.K</h3>
+      <p>General Physician &middot; Bengaluru</p>
+      <div class="hr-rating">
+        <span class="hr-stars">&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="hr-rval">4.2</span>
+        <span class="hr-rlbl">&nbsp;(19 reviews)</span>
+      </div>
+    </div>
+    <div class="hr-loc-badge">
+      <p>&#128205; <span>St Johns Staff Quarters, D-8, Santhosapuram</span><br>Koramangala 2nd Block, Bengaluru &ndash; 560034</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section class="sw spec-bg" id="specialties">
+  <div class="sl fade-up">Medical Services</div>
+  <h2 class="fade-up">General Medical<br>Care</h2>
+  <div class="spec-grid fade-up">
+    <div class="scard"><div class="sc-n">01</div><div class="sc-ico">&#129657;</div><h3>General Medicine</h3><p>Diagnosis and treatment of common illnesses, infections, fever and general health concerns for all ages.</p></div>
+    <div class="scard"><div class="sc-n">02</div><div class="sc-ico">&#129504;</div><h3>Chronic Disease Care</h3><p>Long-term management of diabetes, hypertension, thyroid disorders and other chronic conditions.</p></div>
+    <div class="scard"><div class="sc-n">03</div><div class="sc-ico">&#129658;</div><h3>Preventive Health</h3><p>Health checkups, screenings and preventive care to detect issues early and maintain overall wellness.</p></div>
+    <div class="scard"><div class="sc-n">04</div><div class="sc-ico">&#127810;</div><h3>Respiratory Conditions</h3><p>Treatment of cough, cold, asthma, bronchitis and other respiratory tract conditions.</p></div>
+    <div class="scard"><div class="sc-n">05</div><div class="sc-ico">&#128200;</div><h3>Hypertension / BP</h3><p>Blood pressure monitoring, medication management and lifestyle counselling for hypertensive patients.</p></div>
+    <div class="scard"><div class="sc-n">06</div><div class="sc-ico">&#128137;</div><h3>Diabetes Management</h3><p>Blood sugar monitoring, medication adjustments and diet guidance for diabetic patients.</p></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sw gallery-bg" id="gallery">
+  <div class="sl fade-up">Our Facility</div>
+  <h2 class="fade-up">Medical<br>Infrastructure</h2>
+  <div class="slider-outer fade-up">
+    <button class="sarr sarr-p" onclick="slide(-1)">&#8592;</button>
+    <button class="sarr sarr-n" onclick="slide(1)">&#8594;</button>
+    <div class="slider-track" id="sTrack">
+      <div class="slide act">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1400&q=85" alt="Consultation">
+        <div class="slov"></div>
+        <div class="slcont"><div class="sltxt"><div class="sltag">&#129658; Consultation</div><h3>Expert Consultation</h3><p>Thorough, patient-first consultations with complete medical history review</p></div><div class="slnum">01</div></div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1400&q=85" alt="Diagnostics">
+        <div class="slov"></div>
+        <div class="slcont"><div class="sltxt"><div class="sltag">&#128300; Diagnostics</div><h3>Diagnostic Testing</h3><p>Blood tests, ECG and other diagnostic investigations for accurate diagnosis</p></div><div class="slnum">02</div></div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=1400&q=85" alt="Lab">
+        <div class="slov"></div>
+        <div class="slcont"><div class="sltxt"><div class="sltag">&#129516; Lab</div><h3>Pathology &amp; Lab</h3><p>Complete blood count, blood sugar, lipid profile and other investigations</p></div><div class="slnum">03</div></div>
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1400&q=85" alt="Diabetes">
+        <div class="slov"></div>
+        <div class="slcont"><div class="sltxt"><div class="sltag">&#128137; Chronic Care</div><h3>Chronic Disease Management</h3><p>Ongoing care for diabetes, hypertension and other long-term conditions</p></div><div class="slnum">04</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="sdots" id="sDots">
+    <span class="sdot on" onclick="goSlide(0)"></span>
+    <span class="sdot" onclick="goSlide(1)"></span>
+    <span class="sdot" onclick="goSlide(2)"></span>
+    <span class="sdot" onclick="goSlide(3)"></span>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sw rev-bg" id="reviews">
+  <div class="sl fade-up">Patient Feedback</div>
+  <h2 class="fade-up">What Patients<br>Say</h2>
+  <div class="rev-grid">
+    <div class="rcard fade-up">
+      <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>Dr. Sharma is very thorough and listens patiently. He diagnosed my condition correctly on the first visit. Highly recommended in Koramangala.</p>
+      <div class="rc-name"><strong>Pradeep R.</strong><span>Google Review &middot; General Consultation</span></div>
+    </div>
+    <div class="rcard fade-up">
+      <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>Very helpful and knowledgeable doctor. My BP has been well managed under his care. He also responds quickly on WhatsApp for follow-ups.</p>
+      <div class="rc-name"><strong>Lakshmi S.</strong><span>Google Review &middot; Hypertension Patient</span></div>
+    </div>
+    <div class="rcard fade-up">
+      <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;</div>
+      <p>Good doctor, clear explanations and very approachable. The clinic is conveniently located in Koramangala. Would definitely recommend.</p>
+      <div class="rc-name"><strong>Manjunath K.</strong><span>Google Review &middot; Regular Patient</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sw contact-bg" id="contact">
+  <div class="sl fade-up">Find Us</div>
+  <h2 class="fade-up">Location &amp;<br>Contact</h2>
+  <div class="contact-grid">
+    <div class="cboxes fade-up">
+      <div class="cbox"><div class="cbox-ic">&#128222;</div><div><h5>Phone</h5><a href="tel:08025523095">080 2552 3095</a></div></div>
+      <div class="cbox"><div class="cbox-ic">&#128172;</div><div><h5>WhatsApp</h5><a href="https://wa.me/918025523095" target="_blank">Available on WhatsApp</a></div></div>
+      <div class="cbox"><div class="cbox-ic">&#128205;</div><div><h5>Address</h5><p>St Johns Staff Quarters, D-8, Santhosapuram<br>Koramangala 2nd Block, Bengaluru<br>Karnataka &ndash; 560034</p></div></div>
+      <a href="https://maps.google.com/?q=St+Johns+Staff+Quarters+Koramangala+Bengaluru+560034" target="_blank" class="btn-blue" style="justify-content:center;border-radius:100px">&#128205; Get Directions on Google Maps</a>
+    </div>
+    <div class="fade-up">
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;height:320px">
+        <iframe
+          src="https://maps.google.com/maps?q=Koramangala+2nd+Block+Bengaluru+560034&output=embed"
+          width="100%" height="100%" style="border:0" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+      <div style="margin-top:1rem;background:var(--blue3);border:1px solid rgba(26,58,107,0.15);border-radius:12px;padding:1rem 1.2rem;display:flex;gap:0.8rem;align-items:center">
+        <span style="font-size:1.4rem">&#8505;</span>
+        <p style="font-size:0.78rem;color:var(--mid);line-height:1.6">Clinic is <strong style="color:var(--ink)">temporarily closed</strong>. Please call or WhatsApp to confirm current availability before visiting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPOINTMENT -->
+<section class="sw appt-bg" id="appointment">
+  <div class="appt-grid">
+    <div class="fade-up">
+      <div class="sl">Get In Touch</div>
+      <h2>Book Your<br>Appointment</h2>
+      <p class="sdesc">Fill in the form or WhatsApp directly. We will confirm your appointment quickly.</p>
+      <div class="perks">
+        <div class="perk">General physician &mdash; all age groups</div>
+        <div class="perk">WhatsApp available for quick queries</div>
+        <div class="perk">Koramangala 2nd Block &mdash; easy to reach</div>
+        <div class="perk">Chronic disease long-term management</div>
+      </div>
+    </div>
+    <div class="aform fade-up">
+      <h3>Request a Callback</h3>
+      <p class="fmeta">We will get back to you promptly to confirm your visit</p>
+      <div class="frow2">
+        <div class="fg"><label>Full Name</label><input type="text" placeholder="Your name"></div>
+        <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="Mobile number"></div>
+      </div>
+      <div class="fg"><label>Concern</label>
+        <select>
+          <option value="" disabled selected>Select your concern</option>
+          <option>Fever / Infection</option>
+          <option>Diabetes</option>
+          <option>High BP / Hypertension</option>
+          <option>Cough / Cold / Respiratory</option>
+          <option>Preventive Checkup</option>
+          <option>Thyroid / Hormonal</option>
+          <option>General Consultation</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="frow2">
+        <div class="fg"><label>Preferred Date</label><input type="date"></div>
+        <div class="fg"><label>Preferred Time</label>
+          <select>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg"><label>Symptoms (Optional)</label><textarea placeholder="Describe your symptoms briefly..."></textarea></div>
+      <button class="fsub" onclick="this.textContent='&#10003; Request Sent! We will call you back shortly.';this.style.background='#1a7a3d'">Confirm Request &rarr;</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">
+    <strong>Dr. Sharma G.R.K</strong>
+    <p>St Johns Staff Quarters D-8, Koramangala 2nd Block, Bengaluru &ndash; 560034 &nbsp;&middot;&nbsp; 080 2552 3095</p>
+  </div>
+  <small>&copy; 2025 Dr. Sharma G.R.K. All rights reserved.</small>
+</footer>
+
+<a href="tel:08025523095" class="fab">&#128222; Call Now</a>
+
+<script>
+let cur=0,tot=4;
+const track=document.getElementById('sTrack');
+const dots=document.querySelectorAll('.sdot');
+const slides=document.querySelectorAll('.slide');
+function goSlide(n){slides[cur].classList.remove('act');cur=(n+tot)%tot;slides[cur].classList.add('act');track.style.transform=`translateX(-${cur*100}%)`;dots.forEach((d,i)=>d.classList.toggle('on',i===cur));}
+function slide(d){goSlide(cur+d);}
+setInterval(()=>slide(1),5000);
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')}),{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
